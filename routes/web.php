@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
@@ -29,3 +32,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('admin/user/index',[UserController::class, 'index'])->name('u.index');
+Route::get('admin/category/index',[CategoryController::class, 'index'])->name('u.category');
+Route::get('admin/product/index',[ProductController::class, 'index'])->name('u.product');
