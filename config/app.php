@@ -159,7 +159,10 @@ return [
         /*
          * Package Service Providers...
          */
-
+        // sweetalert แจ้งเตือน
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        // intervention image (รูปภาพ)
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -183,6 +186,10 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        // sweetalert แจ้งเตือน
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        // intervention image (รูปภาพ)
+        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
 ];

@@ -46,6 +46,9 @@
 </head>
 
 <body>
+    <!-- ทำแจ้งเตือนด้วย SweetAlert  -->
+    @include('sweetalert::alert')
+
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -87,14 +90,14 @@
                     </li>  
 
                     <li class="menu-item">
-                        <a href="{{ route('u.category') }}" class="menu-link">
+                        <a href="{{ route('c.category') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-grid-alt"></i>
                             <div data-i18n="Analytics">Category</div>
                         </a>
                     </li>  
 
                     <li class="menu-item">
-                        <a href="{{ route('u.product') }}" class="menu-link">
+                        <a href="{{ route('p.product') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-cart-alt"></i>
                             <div data-i18n="Analytics">Product</div>
                         </a>
